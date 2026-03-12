@@ -9,7 +9,7 @@ from tools import get_stock_price, get_exchange_rate
 
 
 # AI Model
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-3.1-flash-lite-preview"
 
 # AI Client
 client = OpenAI(
@@ -53,6 +53,7 @@ def safe_llm_call(client, **kwargs):
 def run_agent():
     print("=== Financial Assistant CLI ===")
     print("Agent Started. Type 'exit' to quit.")
+    print()
 
     while True:
 
@@ -86,7 +87,7 @@ def run_agent():
                     "content": message.content
                 })
 
-                print("Agent: ", message.content)
+                print("Agent: " + str(message.content))
                 print()
                 break
 
