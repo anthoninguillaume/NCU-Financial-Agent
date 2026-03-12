@@ -10,7 +10,7 @@ tools_schema = [
                 "properties": {
                     "currency_pair": {
                         "type": "string",
-                        "description": "Currency pair like USD_TWD"
+                        "description": "Currency pair like USD_TWD, JPY_TWD or EUR_USD"
                     }
                 },
                 "required": ["currency_pair"],
